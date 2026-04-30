@@ -7,6 +7,7 @@ from django.contrib.auth.hashers import make_password
 from .models import User
 from .permissions import IsAdmin ,IsReceptionist  , IsHR ,IsManager
 from .serializers import UserSerializer
+from .serializers import CustomTokenSerializer
 
 class TestAdminView(APIView):
     permission_classes = [IsAuthenticated, IsAdmin]
@@ -32,9 +33,11 @@ class TestManagerView(APIView):
     def get(self, request):
         return Response({"msg": "Manager access"})
 
-class LoginView(TokenObtainPairView):
-    pass
 
+
+
+class LoginView(TokenObtainPairView):
+    serializer_class = CustomTokenSerializer
 
 class UserListCreateView(APIView):
     permission_classes = [IsAuthenticated, IsAdmin]
