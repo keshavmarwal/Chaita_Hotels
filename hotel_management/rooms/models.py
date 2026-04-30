@@ -1,5 +1,5 @@
 from django.db import models
-from Backend.Chaita_Hotels.hotel_management.hotels.models import Hotel
+from hotels.models import Hotel
 
 class Room(models.Model):
     ROOM_TYPE_CHOICES = (

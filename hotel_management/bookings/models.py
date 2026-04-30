@@ -1,7 +1,7 @@
 from django.db import models
-from Backend.Chaita_Hotels.hotel_management.accounts.models import User
-from Backend.Chaita_Hotels.hotel_management.rooms.models import Room
-from Backend.Chaita_Hotels.hotel_management.guests.models import Guest
+from accounts.models import User
+from rooms.models import Room
+from guests.models import Guest
 # Create your models here.
 class Booking(models.Model):
     STATUS_CHOICES = (

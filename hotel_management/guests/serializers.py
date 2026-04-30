@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Guest
-from Backend.Chaita_Hotels.hotel_management.bookings.serializers import BookingSerializer
+from bookings.serializers import BookingSerializer
 
 
 

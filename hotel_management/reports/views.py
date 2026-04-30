@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from Backend.Chaita_Hotels.hotel_management.rooms.models import Room
-from Backend.Chaita_Hotels.hotel_management.bookings.models import Booking
+from rooms.models import Room
+from bookings.models import Booking
 from django.db.models import Sum
-from Backend.Chaita_Hotels.hotel_management.accounts.permissions import IsAdminOrManager
+from accounts.permissions import IsAdminOrManager
 # Create your views here.
 class DashboardView(APIView):
     permission_classes= [IsAdminOrManager]
