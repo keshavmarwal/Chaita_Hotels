@@ -15,7 +15,7 @@ class Booking(models.Model):
 
     check_in_date = models.DateField()
     check_out_date = models.DateField()
-
+    is_checked_in = models.BooleanField(default=False)
     total_amount = models.DecimalField(max_digits=10, decimal_places=2)
 
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='booked')
